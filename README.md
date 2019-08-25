@@ -8,11 +8,12 @@
 - Firebase (Cloud Firestore, Cloud Storge)
 
 ### 스크린샷
-<img src="/screenshot/login.png" width="10%" style="display:inline" />
-&nbsp;&nbsp;
-<img src="/screenshot/timeline.jpg" width="10%" />
+<img src="/screenshot/login.png" width="20%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="/screenshot/timeline.jpg" width="20%" />
 
 ### 참고
 - firebase 서버 닫음. (로그인부터 수행 불가능)
+
+<br/>
+<br/>
 
 ## 추후 수정 예정 : 없음.
