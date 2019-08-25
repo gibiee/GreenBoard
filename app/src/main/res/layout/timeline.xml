@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/topBar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:layout_width="50dp" android:layout_height="50dp"
+                android:background="@mipmap/icon"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="30dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pwchalk"
+                android:text="Green Board"
+                android:textSize="25dp"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <ImageButton
+            android:id="@+id/writeButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/write"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+            android:id="@+id/topBorder"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/line"
+            app:layout_constraintTop_toBottomOf="@id/topBar"/>
+
+    <ListView
+            android:id="@+id/timelineListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/topBorder"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"/>
+
+    <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#994CAF50"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+        <ImageButton
+                android:id="@+id/timelineButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/timeline_color"
+                android:scaleType="fitCenter"/>
+        <ImageButton
+                android:id="@+id/rankButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rank"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"/>
+        <ImageButton
+                android:id="@+id/infoButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/info"
+                android:scaleType="fitCenter"
+                android:background="#00FFFFFF"
+                android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

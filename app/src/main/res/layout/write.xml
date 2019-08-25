@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/topBar"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+                android:id="@+id/writeButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/write"
+                android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/topBorder"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/line"
+            app:layout_constraintTop_toBottomOf="@id/topBar"/>
+
+    <ImageButton
+            android:id="@+id/writeImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/upload_image"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBorder"/>
+
+    <EditText
+            android:id="@+id/writeText"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:hint="내용을 입력하세요."
+            android:gravity="top"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/writeImage"
+            app:layout_constraintRight_toRightOf="@id/writeImage"
+            app:layout_constraintTop_toBottomOf="@id/writeImage"/>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/writeText"
+            app:layout_constraintRight_toRightOf="@id/writeText"
+            app:layout_constraintTop_toBottomOf="@id/writeText"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar">
+
+        <ImageButton
+                android:id="@+id/write_ok"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_ok"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"/>
+
+        <ImageButton
+                android:id="@+id/write_cancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_cancel"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#808080"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rank"
+                android:scaleType="fitCenter"/>
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/info"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

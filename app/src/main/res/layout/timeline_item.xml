@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#200CAF50">
+
+    <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@color/colorPrimary"
+                android:layout_marginLeft="30dp"/>
+
+        <TextView
+                android:id="@+id/profileId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디"
+                android:fontFamily="@font/bmjua"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"/>
+
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="올린 시각"
+                android:fontFamily="@font/bmjua"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@color/colorPrimaryDark"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@id/profile"/>
+
+    <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="텍스트"
+            android:textSize="18dp"
+            android:fontFamily="@font/bmjua"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/picture"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/message">
+
+        <ImageButton
+                android:id="@+id/treeButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tree"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center"/>
+
+        <ImageButton
+                android:id="@+id/commentButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/comment"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="20dp"
+        android:layout_gravity="center"/>
+
+        <TextView
+                android:id="@+id/treeComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="트리 0그루   댓글 0개"
+                android:fontFamily="@font/bmjua"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
